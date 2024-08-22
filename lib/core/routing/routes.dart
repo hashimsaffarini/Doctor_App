@@ -1,0 +1,43 @@
+import 'package:doc_app/core/routing/app_router.dart';
+import 'package:doc_app/features/login/ui/login_screen.dart';
+import 'package:doc_app/features/onboarding/onboarding_screen.dart';
+import 'package:flutter/material.dart';
+
+class AppRouter {
+  Route? generateRoute(RouteSettings settings) {
+    //final args = settings.arguments;
+    switch (settings.name) {
+      case Routes.onBoardingScreen:
+        return MaterialPageRoute(
+          builder: (_) => const OnBoardingScreen(),
+        );
+      case Routes.loginScreen:
+        return MaterialPageRoute(
+          builder: (_) => const LoginScreen(),
+        );
+      // case Routes.loginScreen:
+      //   return MaterialPageRoute(
+      //     builder: (_) => BlocProvider(
+      //       create: (context) => getIt<LoginCubit>(),
+      //       child: const LoginScreen(),
+      //     ),
+      //   );
+      // case Routes.homeScreen:
+      //   return MaterialPageRoute(
+      //     builder: (_) => BlocProvider(
+      //       create: (context) => HomeCubit(getIt())..getSpecialization(),
+      //       child: const HomeScreen(),
+      //     ),
+      //   );
+      // case Routes.signUpScreen:
+      //   return MaterialPageRoute(
+      //     builder: (_) => BlocProvider(
+      //       create: (context) => getIt<SignupCubit>(),
+      //       child: const SignUpScreen(),
+      //     ),
+      //   );
+      default:
+        return null;
+    }
+  }
+}
