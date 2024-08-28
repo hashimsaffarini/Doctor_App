@@ -5,7 +5,7 @@
 // gestures. You can also use WidgetTester to find child widgets in the widget
 // tree, read text, and verify that the values of widget properties are correct.
 
-import 'package:doc_app/core/routing/routes.dart';
+import 'package:doc_app/core/routing/app_router.dart';
 import 'package:doc_app/doc_app.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';

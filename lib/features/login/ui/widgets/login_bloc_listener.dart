@@ -1,5 +1,5 @@
 import 'package:doc_app/core/helpers/extensions.dart';
-import 'package:doc_app/core/routing/app_router.dart';
+import 'package:doc_app/core/routing/routes.dart';
 import 'package:doc_app/core/theming/styles.dart';
 import 'package:doc_app/features/login/logic/cubit/login_cubit.dart';
 import 'package:doc_app/features/login/logic/cubit/login_state.dart';
