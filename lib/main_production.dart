@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 void main() async {
-  WidgetsFlutterBinding.ensureInitialized();
+  awati WidgetsFlutterBinding.ensureInitialized();
   setUpGetIt();
   await ScreenUtil.ensureScreenSize();
 
