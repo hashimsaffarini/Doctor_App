@@ -1,5 +1,8 @@
+import 'package:doc_app/core/helpers/spacing.dart';
+import 'package:doc_app/features/home/ui/widgets/doctor_speciality_see_all.dart';
 import 'package:doc_app/features/home/ui/widgets/doctors_blue_container.dart';
 import 'package:doc_app/features/home/ui/widgets/home_top_bar.dart';
+import 'package:doc_app/features/home/ui/widgets/specialization_and_doctors_bloc_builder.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -18,11 +21,15 @@ class HomeScreen extends StatelessWidget {
             20.0,
             28.0,
           ),
-          child: const Column(
+          child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              HomeTopBar(),
-              DoctorsBlueContainer()
+              const HomeTopBar(),
+              const DoctorsBlueContainer(),
+              verticalSpace(24),
+              const DoctorsSpecialitySeeAll(),
+              verticalSpace(16),
+              const SpecializationAndDoctorsBlocBuilder()
             ],
           ),
         ),
