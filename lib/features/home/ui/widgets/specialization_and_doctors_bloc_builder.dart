@@ -13,20 +13,20 @@ class SpecializationAndDoctorsBlocBuilder extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocBuilder<HomeCubit, HomeState>(
       buildWhen: (previous, current) =>
-          current is SpecializationError ||
-          current is SpecializationLoading ||
-          current is SpecializationSuccess,
+          current is SpecilizationError ||
+          current is SpecilizationLoading ||
+          current is SpecilizationSucess,
       builder: (context, state) {
         return state.maybeWhen(
-          specializationLoading: () {
+          specilizationLoading: () {
             return setUpLoading();
           },
-          specializationSuccess: (specializations) {
-            var specializationsList = specializations.specializationDataList;
+          specilizationSucess: (specializations) {
+            var specializationsList = specializations;
 
             return setUpSuccess(specializationsList);
           },
-          specializationError: (error) {
+          specilizationError: (error) {
             return const SizedBox.shrink();
           },
           orElse: () => const SizedBox.shrink(),
